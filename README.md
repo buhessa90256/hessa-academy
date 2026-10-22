@@ -21,9 +21,9 @@ Live site: https://buhessa90256.github.io/hessa-academy/
 
 All resources and service-worker scope are relative to this repository path. No custom domain, root site, or other repository is needed or changed.
 
-## iPad
+## Phones and iPad
 
-One screen for an 11-inch iPad in landscape: colorful islands, a chalkboard, a pencil bunny and star rewards. Lessons, stories and the parent guide change rounds in place, with no scrolling. Portrait shows a rotate prompt. Browser layout checks covered Arabic and English at 1194x834, 1180x720 and 1024x650.
+One screen for phones and iPad in portrait or landscape: colorful islands, a chalkboard, a pencil bunny and star rewards. Lessons, stories and the parent guide change rounds in place, with no scrolling. Phone portrait uses two columns of islands, a horizontal letter picker and two rows of writing controls. Browser checks cover both languages at 390x744, 360x640, 667x375, 834x1194 and 1194x834, plus Arabic at 320x568. No scrolling or clipped controls in checked activities and parent pages.
 
 Open in Safari, Share → Add to Home Screen. Visit once online before offline use. Activities are cached; optional external references and uninstalled voices need a connection. Enable **Pencil only** to ignore palm and finger touches on tracing and drawing canvases. Drawings can be exported as PNG. Progress is stored only in localStorage in the current browser; the parent guide exports it as JSON. Clearing site data removes it. Browser testing cannot certify physical Apple Pencil or iPad Safari hardware behavior.
 

@@ -1,4 +1,4 @@
-const CACHE='hessa-academy-v2';
+const CACHE='hessa-academy-v3';
 const ASSETS=['./','./index.html','./style.css','./app.js','./strokes.js','./trace-engine.js','./icon.svg','./icon.png','./manifest.webmanifest'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('hessa-academy-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
