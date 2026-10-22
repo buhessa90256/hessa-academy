@@ -15,7 +15,7 @@ Stars reward practice and participation, **not mastery**. A grown-up must assess
 
 ## Run and publish
 
-Serve this directory over HTTP, e.g. `python -m http.server 8080`. GitHub Pages: Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
+Serve this directory over HTTP, e.g. `python -m http.server 8080`. GitHub Pages: Settings → Pages → Source → GitHub Actions. The Publish Hessa Academy workflow checks JavaScript, packages only the public app files, and deploys pushes to `main`.
 
 Live site: https://buhessa90256.github.io/hessa-academy/
 
