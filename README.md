@@ -11,7 +11,7 @@ An Arabic/English learning game built for iPad, Apple Pencil, touch, and desktop
 - Drawing prompts with save-image, pressure-sensitive pen strokes, undo, and a Pencil-only option that ignores fingers.
 - Al-Fatiha for supervised reading, a hadith about guiding others to good, mealtime manners, UAE facts and quizzes.
 
-Stars reward practice and participation, **not mastery**. Tracing checks starting points, direction, path coverage, stroke order and dots with a child-friendly tolerance. Models teach isolated Arabic print letters; contextual joins and joined name writing are references, not assessed handwriting. Arabic words and name letters proceed right to left; English proceeds left to right. Individual strokes follow their numbered arrows (for example, alif descends). A grown-up should assess grip, formation, reading and pronunciation; teachers may use other valid handwriting conventions. Browser speech synthesis depends on installed Arabic/English voices. Quran text is for supervised reading; use a trusted reciter for tajweed rather than synthetic speech.
+Stars reward practice and participation, **not mastery**. Tracing checks starting points, direction, path coverage, stroke order and dots with a child-friendly tolerance. Models teach isolated Arabic print letters; contextual joins and joined name writing are references, not assessed handwriting. Arabic words and name letters proceed right to left; English proceeds left to right. Individual strokes follow their numbered arrows (for example, alif descends). A grown-up should assess grip, formation, reading and pronunciation; teachers may use other valid handwriting conventions. All 195 spoken lesson prompts, letter names, stories and listening instructions have bundled synthetic MP3 clips. Tapping a lesson speaker turns sound on; the top speaker mutes playback. Device speech is only a fallback for future uncatalogued text. No voice is cloned and no runtime speech service or account is needed. Quran text is for supervised reading; use a trusted reciter for tajweed rather than synthetic speech.
 
 ## Run and publish
 
@@ -25,11 +25,11 @@ All resources and service-worker scope are relative to this repository path. No 
 
 One screen for phones and iPad in portrait or landscape: colorful islands, a chalkboard, a pencil bunny and star rewards. Lessons, stories and the parent guide change rounds in place, with no scrolling. Phone portrait uses two columns of islands, a horizontal letter picker and two rows of writing controls. Browser checks cover both languages at 390x744, 360x640, 667x375, 834x1194 and 1194x834, plus Arabic at 320x568. No scrolling or clipped controls in checked activities and parent pages.
 
-Open in Safari, Share → Add to Home Screen. Visit once online before offline use. Activities are cached; optional external references and uninstalled voices need a connection. Enable **Pencil only** to ignore palm and finger touches on tracing and drawing canvases. Drawings can be exported as PNG. Progress is stored only in localStorage in the current browser; the parent guide exports it as JSON. Clearing site data removes it. Browser testing cannot certify physical Apple Pencil or iPad Safari hardware behavior.
+Open in Safari, Share → Add to Home Screen. Visit once online before offline use. Activities are cached; optional external references need a connection. Enable **Pencil only** to ignore palm and finger touches on tracing and drawing canvases. Drawings can be exported as PNG. Progress is stored only in localStorage in the current browser; the parent guide exports it as JSON. Clearing site data removes it. Browser testing cannot certify physical Apple Pencil or iPad Safari hardware behavior.
 
 ## Validation
 
-Run `node --test test/trace-engine.test.js`. Tests cover correct strokes, wrong starts, reversed movement, backtracking, off-path input, incomplete strokes, corner shortcuts and every Arabic/English model. Native browser pointer checks verified alif, capital E, and lowercase i including its dot. A demo never awards a star or unlocks the next letter. Browser emulation cannot certify a physical Apple Pencil.
+Run `node --test test/*.test.js`. Sound tests cover playback without installed voices, mute/stop, stale callbacks, blocked playback, fallback language selection and complete MP3 coverage. Tests cover correct strokes, wrong starts, reversed movement, backtracking, off-path input, incomplete strokes, corner shortcuts and every Arabic/English model. Native browser pointer checks verified alif, capital E, and lowercase i including its dot. A demo never awards a star or unlocks the next letter. Browser emulation cannot certify a physical Apple Pencil.
 
 ## Content sources
 
@@ -39,3 +39,9 @@ Run `node --test test/trace-engine.test.js`. Tests cover correct strokes, wrong 
 - UAE government: https://u.ae/en/about-the-uae (political facts checked 2026-10-22).
 
 No child evaluation photo, assessment scores, private attachments, tokens or credentials belong in this repository.
+
+## Characters and narration
+
+Two generated Hessa poses replace the bunny on welcome and completion screens. Assets and final prompts are documented in [assets/characters/README.md](assets/characters/README.md). Only the generated characters are published; the supplied reference photo is excluded.
+
+Narration is synthetic: Arabic UAE Fatima and British English Sonia. MP3s are committed and cached for offline use. To regenerate after changing lesson text, run `node scripts/audio-catalog.cjs`, then `python scripts/generate-audio.py` with `edge-tts` installed. Generation sends the public lesson text to Microsoft’s speech service at build time; child progress and drawings are never sent. The public site uses no API credentials. Quran content remains supervised reading with a trusted reciter, not synthetic recitation.

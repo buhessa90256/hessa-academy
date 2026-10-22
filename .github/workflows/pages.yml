@@ -32,11 +32,16 @@ jobs:
           node --check sw.js
           node --check strokes.js
           node --check trace-engine.js
-          node --test test/trace-engine.test.js
+          node --check sound.js
+          node --check voice-clips.js
+          node --check media-range.js
+          node --test test/*.test.js
       - name: Prepare public app files
         run: |
           mkdir _site
           cp index.html app.js style.css strokes.js trace-engine.js sw.js manifest.webmanifest icon.svg icon.png .nojekyll _site/
+          cp sound.js voice-clips.js media-range.js _site/
+          cp -r assets _site/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload app
