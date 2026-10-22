@@ -42,6 +42,6 @@ No child evaluation photo, assessment scores, private attachments, tokens or cre
 
 ## Characters and narration
 
-Two generated Hessa poses replace the bunny on welcome and completion screens. Assets and final prompts are documented in [assets/characters/README.md](assets/characters/README.md). Only the generated characters are published; the supplied reference photo is excluded.
+Six generated Hessa poses appear on the home islands, every activity header, all parent-guide pages and completion screens. Poses change with the selected activity. Assets and final prompts are documented in [assets/characters/README.md](assets/characters/README.md). Only the generated characters are published; the supplied reference photo is excluded.
 
 Narration is synthetic: Arabic UAE Fatima and British English Sonia. MP3s are committed and cached for offline use. To regenerate after changing lesson text, run `node scripts/audio-catalog.cjs`, then `python scripts/generate-audio.py` with `edge-tts` installed. Generation sends the public lesson text to Microsoft’s speech service at build time; child progress and drawings are never sent. The public site uses no API credentials. Quran content remains supervised reading with a trusted reciter, not synthetic recitation.

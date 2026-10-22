@@ -1,6 +1,6 @@
 importScripts('./voice-clips.js','./media-range.js');
-const CACHE='hessa-academy-v4';
-const ASSETS=['./','./index.html','./style.css','./app.js','./strokes.js','./trace-engine.js','./sound.js','./voice-clips.js','./media-range.js','./assets/characters/hessa-welcome.png','./assets/characters/hessa-celebrate.png','./icon.svg','./icon.png','./manifest.webmanifest',...Object.values(globalThis.HessaVoiceClips).flatMap(clips=>Object.values(clips))];
+const CACHE='hessa-academy-v5';
+const ASSETS=['./','./index.html','./style.css','./app.js','./strokes.js','./trace-engine.js','./sound.js','./voice-clips.js','./media-range.js','./assets/characters/hessa-welcome.png','./assets/characters/hessa-celebrate.png','./assets/characters/hessa-listening.png','./assets/characters/hessa-reading.png','./assets/characters/hessa-thinking.png','./assets/characters/hessa-painting.png','./icon.svg','./icon.png','./manifest.webmanifest',...Object.values(globalThis.HessaVoiceClips).flatMap(clips=>Object.values(clips))];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('hessa-academy-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{

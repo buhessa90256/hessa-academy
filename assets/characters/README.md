@@ -12,3 +12,14 @@ Both PNGs preserve the generated transparent alpha channel.
 Welcome: “Create a single polished full-body game mascot cutout of Hessa, the young girl from the supplied reference sheet (identity reference only). Preserve her recognizable long dark brown curly hair, warm light brown skin, large brown eyes, red-and-white striped short-sleeve button-front knee-length dress, white sneakers, child age and proportions. Translate her into a delightful, softly shaded 3D cartoon storybook character for a preschool Arabic/English learning game. Warm cheerful smile. Standing facing camera, one hand waves hello, the other holds an oversized yellow learning pencil upright. Whole body and pencil comfortably in frame, generous but modest transparent margins, centered. Rounded expressive kid-friendly design, beautiful readable silhouette at 100px tall, soft warm studio lighting. Genuine transparent alpha background, no scenery, no ground plane, no text, no logo, no additional people. This will be an app character asset, not a character sheet. Produce just this one welcome pose.”
 
 Celebration (welcome character used as the consistency reference): “Create a matching second game mascot asset of the EXACT same cartoon Hessa girl from this reference, same face, long dark curly hair, brown eyes, red-and-white striped knee-length dress with buttons, white sneakers, child proportions and soft polished 3D storybook style. New pose: joyful small celebration, both hands holding a single large golden five-point star at chest height, broad happy smile, looking toward the viewer, feet on ground. Full body entirely visible, centered composition, clean readable silhouette, minimal empty margin. Genuine transparent alpha background with absolutely no glow, color wash, scenery or backdrop. No pencil, no text, no logo, no other people. Only this one celebration pose.”
+
+## Activity companions
+
+Hessa appears beside the title in every activity. The pose changes with the selected activity, and all parent-guide pages have a companion too. Home island cards preview the six poses.
+
+- `hessa-listening.png`: hand cupped to her ear for sounds and listening.
+- `hessa-reading.png`: open book for stories, reading and the parent guide.
+- `hessa-thinking.png`: thoughtful pose with a puzzle piece for problem solving.
+- `hessa-painting.png`: brush and palette for the drawing studio.
+
+The pencil and star poses remain in writing and celebrations. [Final activity prompts](activity-prompts.md) document the four new built-in image generations.
