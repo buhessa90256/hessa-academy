@@ -30,17 +30,19 @@ jobs:
         run: |
           node --check app.js
           node --check sw.js
+          node --check strokes.js
+          node --check trace-engine.js
+          node --test test/trace-engine.test.js
       - name: Prepare public app files
         run: |
           mkdir _site
-          cp index.html app.js style.css sw.js manifest.webmanifest icon.svg icon.png .nojekyll _site/
+          cp index.html app.js style.css strokes.js trace-engine.js sw.js manifest.webmanifest icon.svg icon.png .nojekyll _site/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload app
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
-          include-hidden-files: true
       - name: Publish app
         id: deployment
         uses: actions/deploy-pages@v4
